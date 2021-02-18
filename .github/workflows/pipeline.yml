@@ -18,7 +18,4 @@ jobs:
           echo "Hello World!"
       - name: Now it is
         run: |
-          cd frontend
-      - name: Now it is
-        run: |
-          ls
+          cd frontend && ls
