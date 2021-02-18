@@ -14,9 +14,9 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.8.9
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "secret-fortress-83752"
+          heroku_app_name: "bloglist-ci-cd"
           heroku_email: "orazurobert@yahoo.com"
-          healthcheck: "https://secret-fortress-83752.herokuapp.com/"
+          healthcheck: "https://bloglist-ci-cd.herokuapp.com/"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
       - name: Bump version and push tag
