@@ -20,7 +20,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bloglist-ci-cd"
           heroku_email: "orazurobert@yahoo.com"
-          healthcheck: "https://bloglist-ci-cd.herokuapp.com"
+          healthcheck: "https://bloglist-ci-cd.herokuappp.com"
           rollbackonhealthcheckfailed: true
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.33.0
@@ -28,7 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
           WITH_V: true
-      - name: Slack notification
+      - name: Slack success notification
         uses: 8398a7/action-slack@v3
         with:
           status: custom
