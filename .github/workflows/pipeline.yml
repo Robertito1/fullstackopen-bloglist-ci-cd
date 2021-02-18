@@ -1,4 +1,4 @@
-name: Hello World!
+name: Pipeline
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  hello_world_job:
+  pipeline_job:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +19,6 @@ jobs:
       - name: Now it is
         run: |
           cd frontend
-        - name: Now it is
+      - name: Now it is
         run: |
           ls
