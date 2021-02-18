@@ -1,6 +1,7 @@
 module.exports = {
     env: {
         commonjs: true,
+        es2015: true,
         node: true,
     },
     extends: ['eslint:recommended', 'prettier'],
