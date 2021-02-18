@@ -13,9 +13,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - name: Say hello
+      - name: npm install
         run: |
-          echo "Hello World!"
-      - name: Now it is
+          npm install
+      - name: npm lint
         run: |
-          cd frontend && ls
+          npm run lint
