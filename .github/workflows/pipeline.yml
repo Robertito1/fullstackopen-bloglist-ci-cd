@@ -19,3 +19,6 @@ jobs:
       - name: npm lint
         run: |
           npm run lint
+      - name: npm build
+        run: |
+          npm run build:ui
