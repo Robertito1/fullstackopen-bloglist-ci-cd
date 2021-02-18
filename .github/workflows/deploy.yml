@@ -9,7 +9,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build:
+  deploy_job:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message), ', '), '#skip')}}
     steps:
@@ -20,7 +20,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bloglist-ci-cd"
           heroku_email: "orazurobert@yahoo.com"
-          healthcheck: "https://bloglist-ci-cd.herokuappp.com"
+          healthcheck: "https://bloglist-ci-cd.herokuapp.com"
           rollbackonhealthcheckfailed: true
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.33.0
