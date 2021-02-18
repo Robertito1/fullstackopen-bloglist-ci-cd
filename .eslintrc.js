@@ -5,7 +5,7 @@ module.exports = {
         node: true,
     },
     extends: ['eslint:recommended', 'prettier'],
-    parserOptions: { ecmaVersion: 12 },
+    parserOptions: { ecmaVersion: 6 },
     rules: {
         indent: ['error', 4],
         'linebreak-style': ['error', 'windows'],
