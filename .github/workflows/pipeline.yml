@@ -12,5 +12,9 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello World!"
-        run: cd /frontend
-        run: ls
+      - name: Now it is
+        run: |
+          cd /frontend
+      - name: Now it is
+        run: |
+          ls -l
