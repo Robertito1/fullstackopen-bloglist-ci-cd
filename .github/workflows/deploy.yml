@@ -17,7 +17,7 @@ jobs:
           heroku_app_name: "bloglist-ci-cd"
           heroku_email: "orazurobert@yahoo.com"
           healthcheck: "https://bloglist-ci-cd.herokuapp.com"
-          # rollbackonhealthcheckfailed: true
+          rollbackonhealthcheckfailed: true
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.33.0
         env:
